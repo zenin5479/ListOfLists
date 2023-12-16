@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Channels;
 
 namespace ListOfLists
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             List<List<string>> itemBag = new List<List<string>>();
             List<string> weapons = new List<string>
@@ -46,22 +45,22 @@ namespace ListOfLists
                 new List<string> { "Девять", "Десять" }
             };
 
-            for (var i = 0; i < myList.Count; i++)
+            for (int i = 0; i < myList.Count; i++)
             {
-                var subList = myList[i];
+                List<string> subList = myList[i];
                 Console.WriteLine("Лист {0}", i);
-                for (var index = 0; index < subList.Count; index++)
+                for (int j = 0; j < subList.Count; j++)
                 {
-                    var item = subList[index];
+                    var item = subList[j];
                     Console.WriteLine(item);
                 }
 
                 Console.WriteLine();
             }
 
-            for (var i = 0; i < myList.Count; i++)
+            for (int i = 0; i < myList.Count; i++)
             {
-                var subList = myList[i];
+                List<string> subList = myList[i];
                 Console.WriteLine("Лист {0}", i);
                 foreach (string item in subList)
                 {
