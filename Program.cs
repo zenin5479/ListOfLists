@@ -7,37 +7,27 @@ namespace ListOfLists
     {
         static void Main()
         {
-            List<List<string>> itemBag = new List<List<string>>();
-            List<string> weapons = new List<string>
-            {
-                "Sword",
-                "Dagger",
-                "Crossbow"
-            };
+            List<List<string>> itembag = new List<List<string>>();
+            List<string> weapons = new List<string> { "Меч", "Кинжал", "Арбалет" };
 
-            itemBag.Add(weapons);
+            itembag.Add(weapons);
 
-            List<string> potions = new List<string>
-            {
-                "Health Potion",
-                "Strength Potion",
-                "Luck Potion"
-            };
+            List<string> potions = new List<string> { "Зелье здоровья", "Зелье силы", "Зелье удачи" };
 
-            itemBag.Add(potions);
+            itembag.Add(potions);
 
-            for (int i = 0; i < itemBag.Count; i++)
+            for (int i = 0; i < itembag.Count; i++)
             {
                 Console.WriteLine("Лист {0}", i);
-                for (int j = 0; j < itemBag[i].Count; j++)
+                for (int j = 0; j < itembag[i].Count; j++)
                 {
-                    Console.WriteLine(itemBag[i][j]);
+                    Console.WriteLine(itembag[i][j]);
                 }
 
                 Console.WriteLine();
             }
 
-            List<List<string>> myList = new List<List<string>>
+            List<List<string>> mylist = new List<List<string>>
             {
                 new List<string> { "Один", "Два" },
                 new List<string> { "Три", "Четыре", "Пять" },
@@ -45,24 +35,24 @@ namespace ListOfLists
                 new List<string> { "Девять", "Десять" }
             };
 
-            for (int i = 0; i < myList.Count; i++)
+            for (int i = 0; i < mylist.Count; i++)
             {
-                List<string> subList = myList[i];
+                List<string> sublist = mylist[i];
                 Console.WriteLine("Лист {0}", i);
-                for (int j = 0; j < subList.Count; j++)
+                for (int j = 0; j < sublist.Count; j++)
                 {
-                    var item = subList[j];
+                    var item = sublist[j];
                     Console.WriteLine(item);
                 }
 
                 Console.WriteLine();
             }
 
-            for (int i = 0; i < myList.Count; i++)
+            for (int i = 0; i < mylist.Count; i++)
             {
-                List<string> subList = myList[i];
+                List<string> sublist = mylist[i];
                 Console.WriteLine("Лист {0}", i);
-                foreach (string item in subList)
+                foreach (string item in sublist)
                 {
                     Console.WriteLine(item);
                 }
@@ -70,9 +60,9 @@ namespace ListOfLists
                 Console.WriteLine();
             }
 
-            foreach (List<string> subList in myList)
+            foreach (List<string> sublist in mylist)
             {
-                foreach (string item in subList)
+                foreach (string item in sublist)
                 {
                     Console.WriteLine(item);
                 }
